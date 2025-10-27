@@ -7,16 +7,6 @@ import java.util.Scanner;
  */
 
 public class Ejercicio2 {
-    public static void multiplication(int num1, int num2) {
-        int result;
-        result = num1 * num2;
-        System.out.println("La operacion que se realizo es producto y el resultado es: " + result);
-    }
-    public static void sum(int num1, int num2) {
-        int result;
-        result = num1 + num2;
-        System.out.println("La operacion que se realizo es suma y el resultado es: " + result);
-    }
     public static void main(String[] args) {
         Scanner entry = new Scanner(System.in);
         int num1, num2;
@@ -28,9 +18,9 @@ public class Ejercicio2 {
             num2 = entry.nextInt();
         
         if (num1 > 10) {
-            multiplication(num1, num2);
+            ejercicio2.Operations.Multiplication(num1, num2);
         } else {
-            sum(num1, num2);
+            ejercicio2.Operations.Sum(num1, num2);
         }
     }
 

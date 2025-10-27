@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Ejercicio1 {
     
-    public static void positiveChecker(int num) {
+    public static void PositiveNumChecker(int num) {
         if (num < 0) {
             System.out.println("El numero introducido es negativo.");
         }else {
@@ -23,7 +23,7 @@ public class Ejercicio1 {
             System.out.println("Por favor, introduzca un numero: ");
             num = entry.nextInt();
         
-        positiveChecker(num);
+        PositiveNumChecker(num);
     }
 
 }

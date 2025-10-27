@@ -7,12 +7,18 @@ import java.util.Scanner;
  */
 public class Ejercicio8 {
     public static void exchangeCalculator(int dinero, int billetes50, int billetes20, int billetes10, int billetes5, int monedas2, int monedas1) {
+        
         billetes50 = dinero / 50;
-        billetes20 = (dinero % 50) / 20;
-        billetes10 = ((dinero % 50) % 20) / 10;
-        billetes5 = (((dinero % 50) % 20) % 10) / 5;
-        monedas2 = ((((dinero % 50) % 20) % 10) % 5) / 2;
-        monedas1 = (((((dinero % 50) % 20) % 10) % 5) % 2) / 1;
+        dinero %=  50;
+        billetes20 = dinero / 20;
+        dinero %= 20;
+        billetes10 = dinero / 10;
+        dinero %= 10;
+        billetes5 = dinero / 5;
+        dinero %= 5;
+        monedas2 = dinero / 2;
+        dinero %= 2;
+        monedas1 = dinero / 1;
         
         if (billetes50 > 0) {
             System.out.println("Billetes de 50: " + billetes50);
@@ -27,10 +33,10 @@ public class Ejercicio8 {
             System.out.println("Billetes de 5: " + billetes5);
         }
         if (monedas2 > 0) {
-            System.out.println("Billetes de 2: " + monedas2);
+            System.out.println("Monedas de 2: " + monedas2);
         }
         if (monedas1 > 0) {
-            System.out.println("Billetes de 1: " + monedas1);
+            System.out.println("Monedas de 1: " + monedas1);
         }
         
         

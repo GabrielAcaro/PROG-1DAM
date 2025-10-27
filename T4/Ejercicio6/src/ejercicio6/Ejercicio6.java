@@ -19,9 +19,17 @@ public class Ejercicio6 {
             System.out.println("Notable");
         } else {
             System.out.println("Sobresaliente");
-        
-            
         }
+        
+        /* Lo mejor despeus de mirar la corrección:
+            switch (nota) {
+            case 1, 2, 3, 4 -> System.out.println("Suspenso");
+            case 5, 6 -> System.out.println("Suspenso");
+            case 7, 8 -> System.out.println("Bien");
+            case 9, 10 -> System.out.println("Sobresaliente");
+            default -> System.err.println("Introduzca un numero entre 0 y 10");
+            }
+        */
         
     }
     public static void main(String[] args) {
