@@ -36,7 +36,7 @@ public class Ejercicio14 {
     public static void displayMultiples(int num) { 
         int contador = 0; // Declaramos e inicializamos la variable contador de multiplos
 
-            System.out.println("Los numeros multiplos de 3 entre 1 y " + num + " son "); // mostramos texto inicial
+            System.out.println("Los numeros multiplos de 3 entre 1 y " + num + " son: "); // mostramos texto inicial
 
         // Bucle que recorre los numeros desde 1 hasta el numero introducido
         

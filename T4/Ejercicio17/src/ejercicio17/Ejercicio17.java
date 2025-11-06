@@ -22,7 +22,7 @@ public class Ejercicio17 {
         Scanner entry = new Scanner(System.in); // Creamos el objeto Scanner para leer datos introducidos por el usuario
         char letter; // Declaramos la variable letter
         
-            System.out.println("Introduce una letra minuscula "); // Pedimos al usuario que introduzca una letra
+            System.out.println("Introduce una letra minuscula: "); // Pedimos al usuario que introduzca una letra
             letter = entry.nextLine().charAt(0); // Leemos la letra introducida por el usuario
         
         return letter; // Devolvemos la letra
@@ -44,12 +44,12 @@ public class Ejercicio17 {
             // Comprobamos si la letra del usuario es igual a la letra aleatoria
             
             if (userLetter == randomLetter) { 
-                System.out.println("Has acertado la letra es " + randomLetter); // Mostramos mensaje de acierto
-                System.out.println("Has necesitado " + intentos + " intentos"); // Mostramos el numero de intentos
+                System.out.println("Has acertado, la letra es: " + randomLetter); // Mostramos mensaje de acierto
+                System.out.println("Has necesitado: " + intentos + " intentos"); // Mostramos el numero de intentos
             } else if (userLetter < randomLetter) { 
-                System.out.println("La letra que debes adivinar esta despues en el alfabeto "); // Damos pista al usuario
+                System.out.println("La letra que debes adivinar esta despues en el alfabeto! "); // Damos pista al usuario
             } else { 
-                System.out.println("La letra que debes adivinar esta antes en el alfabeto "); // Damos pista al usuario
+                System.out.println("La letra que debes adivinar esta antes en el alfabeto! "); // Damos pista al usuario
             }
         } while (userLetter != randomLetter); // Repetimos mientras el usuario no acierte
     }
