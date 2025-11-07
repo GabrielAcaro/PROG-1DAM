@@ -1,4 +1,5 @@
 package colacarniceria;
+import java.util.InputMismatchException;
 import java.util.Scanner; // Importamos la clase Scanner
 
 /**
@@ -72,12 +73,16 @@ public class ColaCarniceria {
     // Comienzo del metodo main
     
     public static void main(String[] args) {
-        int opcion;
-        char mostrador;
+        int opcion=0;
+        char mostrador=0;
         
         do {
             mostrarMenu(); // Mostramos el menu al usuario
-            opcion = pedirOpcion(); // Pedimos la opcion al usuario
+            try {
+            opcion = pedirOpcion(); // Leemos la opcion del usuario
+            } catch (InputMismatchException e) {
+            System.out.println("Introduzca solo un numero entre 1 y 3");
+        }
             mostrador = generarLetraAleatoria(INICIO_RANGO_TICKET, FINAL_RANGO_TICKET); // Generamos letra de mostrador aleatoria
             
             switch (opcion) {
