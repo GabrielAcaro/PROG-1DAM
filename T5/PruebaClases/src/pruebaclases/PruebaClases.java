@@ -13,17 +13,18 @@ public class PruebaClases {
         bici1.setTipo("Montania");
         bici1.setAntiguedad(6);
         
-        Bicicleta bici2 = new Bicicleta();
-        bici2.setMarca("Canondale");
-        bici2.setColor("Roja");
-        bici2.setTipo("Carretera");
-        bici2.setAntiguedad(15);
+        Bicicleta bici2 = new Bicicleta("Cannondale", "Roja", "Carretera", 15);
+        // bici2.setMarca("Canondale");
+        // bici2.setColor("Roja");
+        // bici2.setTipo("Carretera");
+        // bici2.setAntiguedad(15);
         
         System.out.println("Bici 1: \n");
         bici1.mostrarBicicleta();
         
         System.out.println("\nBici 2: \n");
-        bici2.mostrarBicicleta();
+        System.out.println(bici2.toString());
+        System.out.println("Marca: " + bici2.getMarca());
         
         
         System.out.println("\nAntiguedad Bici 1: \n");
