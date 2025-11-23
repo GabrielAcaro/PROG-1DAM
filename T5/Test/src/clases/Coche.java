@@ -42,18 +42,30 @@ public class Coche {
         color = c;
     }
     
+    public int getVelocidad(){
+        return velocidad;
+    }
+    
+    public void setVelocidad(int v){
+        velocidad = v;
+    }
+    
     //Otros métodos
     
     public void arrancarCoche() {
         motorEncendido = true;
-        velocidad = 10;
         System.out.println("El coche se ha arrancado");
     }
     
     public void apagarCoche() {
-        motorEncendido = false;
-        velocidad = 0;
-        System.out.println("El coche se a apagado");
+        if (velocidad == 0) {
+            motorEncendido = false;
+            velocidad = 0;
+            System.out.println("El coche se a apagado");
+        } else {
+            System.out.println("Baje la velocidad antes de apagar el coche");
+        }
+        
     }
     
     public void acelerarCoche() {
@@ -76,7 +88,15 @@ public class Coche {
     }
     
     public void obtenerEstado() {
-        
+        System.out.println("Estado del vehiculo actual: \n");
+        System.out.println("Marca: " + marca);
+        System.out.println("Modelo: " + modelo);
+        if (motorEncendido) {
+        System.out.println("\nMotor: Encendido");
+        } else{
+            System.out.println("\nMotor: Apagado");
+        }
+        System.out.println("Velocidad: " + velocidad + "\n");
     }
     
     //Mostrar

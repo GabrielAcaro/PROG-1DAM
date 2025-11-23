@@ -11,6 +11,11 @@ public class Bicicleta {
     private String color;
     private String tipo;
     private int antiguedad;
+    private Propietario propietario;
+    
+    // Atributo static
+    
+    private static int contadorBicicletas = 0;
     
     //Constructores
     public Bicicleta(){
@@ -18,13 +23,27 @@ public class Bicicleta {
         color = "";
         tipo = "";
         antiguedad = 0;
+        propietario = new Propietario();
+        aumentarContador();
     }
     
-    public Bicicleta(String m, String c, String t, int a){
+    public Bicicleta(String m, String c, String t, int a, String nombrePropietario, int edadPropietario){
         marca = m;
         color = c;
         tipo = t;
         antiguedad = a;
+        propietario = new Propietario(nombrePropietario, edadPropietario);
+        aumentarContador();
+
+    }
+    
+    public Bicicleta(String m) {
+        marca = m;
+        color = "";
+        tipo = "";
+        antiguedad = 0;
+        propietario = new Propietario();
+        aumentarContador();
     }
     
     //Getters/Setters
@@ -58,6 +77,18 @@ public class Bicicleta {
     public void setAntiguedad(int a){
         antiguedad = a;
     }
+
+    public static int getContadorBicicletas() {
+        return contadorBicicletas;
+    }
+
+    public static void setContadorBicicletas(int cont) {
+        Bicicleta.contadorBicicletas = cont;
+    }
+    
+    public static void aumentarContador() {
+        Bicicleta.contadorBicicletas++;
+    }
     
     
     //Otros métodos
@@ -77,12 +108,16 @@ public class Bicicleta {
         System.out.println("Color: " + color);
         System.out.println("Tipo: " + tipo);
         System.out.println("Antiguedad: " + antiguedad);
+        System.out.println();
     }
+
+    // Método toString() de la clase
 
     @Override
     public String toString() {
-        return "Bicicleta{" + "marca=" + marca + ", color=" + color + ", tipo=" + tipo + ", antiguedad=" + antiguedad + '}';
+        return "Bicicleta{" + "marca=" + marca + ", color=" + color + ", tipo=" + tipo + ", antiguedad=" + antiguedad + ", propietario=" + propietario + '}';
     }
+    
     
     
     
