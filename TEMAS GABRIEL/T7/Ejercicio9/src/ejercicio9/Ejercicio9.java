@@ -28,6 +28,7 @@ public class Ejercicio9 {
             num /= 10;
             contador++;
         }
+        
         return contador;
     }
     
