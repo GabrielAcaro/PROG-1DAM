@@ -5,6 +5,7 @@ import java.util.Scanner;
  * Ejercicio16
  * @author Gabriel Acaro Sánchez
  */
+
 public class Ejercicio16 {
     public static String[] secretWords() {
         String[] secretWords = new String[10];
