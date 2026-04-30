@@ -1,0 +1,8 @@
+Nombre: Pedro
+Edad: 20
+Telefono: 123456789
+---
+Nombre: Luis
+Edad: 18
+Telefono: 987654321
+---
